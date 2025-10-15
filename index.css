@@ -1,0 +1,189 @@
+/* General Styles */
+body {
+    background-color: black;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+p, h1 {
+    color: white;
+    font-weight: normal;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+a {
+    display: block;
+    padding: 0px 12px;  /* Increased padding to make buttons a bit bigger */
+    background-color: #333;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    width: 75%;  /* Buttons will take up 75% of the screen width */
+    max-width: 350px;  /* Max width to ensure buttons don't get too wide on larger screens */
+    min-width: 220px;  /* Minimum width to ensure buttons look good on small screens */
+    height: 60px;  /* Adjusted height for a bigger button */
+    line-height: 60px;  /* Center text vertically */
+    border: 2px solid white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.btn-group-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form & Textarea Styling */
+form {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px; /* Limits the form width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    resize: none;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 10px 0;
+    color: white;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Post Styles */
+#posts {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.post {
+    background-color: #222;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.post img {
+    width: 100%;
+    max-width: 500px; /* Limit the max width of images */
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.post p {
+    font-size: 1.1rem;
+    color: white;
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    a {
+        width: 85%;  /* Increase button width on small screens */
+        font-size: 1.1rem;  /* Slightly larger font size for better readability */
+        padding: 14px 28px;  /* Adjust padding for better size on small screens */
+    }
+
+    form {
+        padding: 15px;
+        max-width: 90%; /* Allow form to take up more space on small screens */
+    }
+
+    button {
+        max-width: 90%; /* Buttons on mobile should fill more of the width */
+    }
+}
+
+/* Tablets or Mid-Range Devices */
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    a {
+        width: 80%;  /* Adjust button width for medium screens */
+        padding: 14px 30px;  /* Adjust padding for a balanced look */
+    }
+
+    form {
+        max-width: 80%; /* Form can take up a bit more space on medium screens */
+    }
+}
+
+/* Larger Screens */
+@media (min-width: 1200px) {
+    .container {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    a {
+        width: 25%;  /* Keep the width small on large screens */
+    }
+
+    form {
+        max-width: 50%; /* Form should be narrower on large screens */
+    }
+
+    .post {
+        width: 80%; /* Posts on large screens should take up a good portion of the screen */
+    }
+}
